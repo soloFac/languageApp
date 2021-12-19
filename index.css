@@ -1,0 +1,9 @@
+div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em;
+}
+
+.gif{
+    width: 30vw;
+}
