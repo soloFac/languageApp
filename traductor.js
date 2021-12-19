@@ -33,12 +33,12 @@ async function traductor ($palabra) {
 
   
 
-  await page.click('.VfPpkd-Bz112c-RLmnJb')
+  // await page.click('.VfPpkd-Bz112c-RLmnJb')
                     
 
-  // escribir el idioma seleccionado
-  await page.type('[aria-label="Buscar idiomas"]')
-  await page.type('[aria-label="Buscar idiomas"]')
+  // // escribir el idioma seleccionado
+  // await page.type('[aria-label="Buscar idiomas"]')
+  // await page.type('[aria-label="Buscar idiomas"]')
 
 
   // clases de nombre de los idiomas Llmcnf
@@ -70,15 +70,20 @@ async function traductor ($palabra) {
   });
 }
 
-let palabra = 'pancho'
+let palabra = 'hola'
 
 traductor(palabra)
   .then(result => {
     for (let i = result.length-1; i >= 0; i--) {
       console.log(result[i]);
     }
+    // setTimeout(function(){
+    //   console.log("I am the third log after 5 seconds");
+    // },30000);
   })
 
+
+  
 // console.log(traducido.length)
 
 // for (let i = 0; i < traducido.length; i++) {
