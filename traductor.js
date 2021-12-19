@@ -1,10 +1,10 @@
-const { chromium } = require('playwright');
+export const { chromium } = require('playwright');
 
-async function seleccionarIdioma($src, $target){
-
+export async function seleccionarIdioma($src, $target){
+  
 }
 
-async function traductor ($palabra) {
+export async function traductor ($palabra) {
   const browser = await chromium.launch({ headless: false })
   
   const page = await browser.newPage()
@@ -43,7 +43,7 @@ async function traductor ($palabra) {
 
   // clases de nombre de los idiomas Llmcnf
 
-  await page.waitForTimeout(20000)
+  // await page.waitForTimeout(20000)
 
   // console.log("Dentro de la funcion")
   // console.log(traducido[0])

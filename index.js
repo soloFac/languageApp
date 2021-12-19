@@ -1,23 +1,23 @@
-
+// import { chromium, traductor , seleccionarIdioma } from '/traductor.js';
 
 
 const btnBuscar = document.getElementById('buscar')
-let palabra = document.getElementById('gif').value
+let palabra = document.getElementById('palabra').value
 
-document.getElementById('gif').addEventListener('keyup', () => {
-    palabra = document.getElementById('gif').value
+document.getElementById('palabra').addEventListener('keyup', () => {
+    palabra = document.getElementById('palabra').value
 })
 
 btnBuscar.addEventListener('click', () => {
     apiImgUnsplash(palabra)
 })
 
-document.getElementById('gif').addEventListener('keyup', function (event) {
+document.getElementById('palabra').addEventListener('keyup', function (event) {
     // Number 13 is the 'Enter' key on the keyboard
     // console.log(event.keyCode)
     // console.log(clase)
 
-    console.log(document.getElementById('gif').value)
+    console.log(document.getElementById('palabra').value)
     if (event.code === 'Enter') {
         // elimino los gifs anteriores
         const clases = document.querySelectorAll('.gif')
@@ -52,9 +52,9 @@ function apiGif (keyWord) {
                 cont += 1
                 const img = document.createElement('img')
                 img.src = url
-                img.className = 'gif'
+                img.className = 'palabra'
 
-                document.getElementById('app').appendChild(img)
+                document.getElementById('imagenes').appendChild(img)
             })
         })
 }
@@ -78,9 +78,9 @@ function apiImg (keyWord) {
                 cont += 1
                 const img = document.createElement('img')
                 img.src = url
-                img.className = 'gif'
+                img.className = 'palabra'
 
-                document.getElementById('app').appendChild(img)
+                document.getElementById('imagenes').appendChild(img)
             })
         })
 }
@@ -93,20 +93,30 @@ function apiImgUnsplash (keyWord) {
         .then(res => res.json())
         .then(response => {
             const { results } = response
-            const gifs = results.map(image => image.urls.thumb)
+            const gifs = results.map(image => image.urls.regular)
             console.log(gifs)
 
-            let cont = 0
+            //Elimino los resultados anteriores
+            const clases = document.querySelectorAll('.img')
+            clases.forEach(clase => {
+                clase.remove()
+            })
+
+            //Cambio el valor de la traduccion
+            const traduccion = document.getElementById("traduccion")
+            traduccion.textContent = keyWord
+
+
+            let cont = 1
             gifs.forEach(url => {
-                if (cont === 0) {
-                    console.log(url)
+                //Solo quiero recuperar 3 imagenes
+                if (cont <= 3) {
+                    var img = document.createElement('img')
+                    img.src = url
+                    img.className = 'img'
                 }
                 cont += 1
-                const img = document.createElement('img')
-                img.src = url
-                img.className = 'gif'
-
-                document.getElementById('app').appendChild(img)
+                document.getElementById('imagenes').appendChild(img)
             })
         })
 }
@@ -139,4 +149,9 @@ function apiImgUnsplash (keyWord) {
 // }
 
 
-
+// traductor(palabra)
+//     .then(result => {
+//         for (let i = result.length-1; i >= 0; i--) {
+//             console.log(result[i]);
+//         }
+//     })

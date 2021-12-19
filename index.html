@@ -10,12 +10,17 @@
 <body>
     <section>
         <article>
-            <label for="gif">Palabra: </label>
-            <input type="text" name="gif" id="gif">
+            <div class="buscador">
+                <label for="gif">Palabra: </label>
+                <input type="text" name="gif" id="palabra" placeholder="Buscar...">
+                
+                <button type="submit" id="buscar">Buscar</button>
+            </div>
 
-            <button type="submit" id="buscar">Buscar</button>
             
-            <div id="app"></div>
+            <div id="imagenes"></div>
+
+            <p id="traduccion"></p>
         </article>
     </section>
     <script src="index.js" type="module"></script>
