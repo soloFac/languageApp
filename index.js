@@ -6,6 +6,7 @@ const { firefox } = require('playwright');
 
 
 async function escribirPalabra({ page }, palabra){
+    // await page.waitForSelector('[aria-label="Texto original"]')
     await page.type('[aria-label="Texto original"]', palabra)
     await page.waitForSelector('span[class="VIiyi"]')
 }
@@ -23,12 +24,12 @@ async function traductor(palabra, src, target) {
     await page.goto(`https://translate.google.com.ar/?hl=es&sl=${src}&tl=${target}&op=translate`)
     // await page.click('class=VfPpkd-YVzG2b')
     // const content = await page.textContent('[aria-label="Texto original"]')
-    escribirPalabra({browser, page}, palabra);
+
+    //ESCRIBO LA PALABRA PARA TRADUCIRLA
+    await page.type('[aria-label="Texto original"]', palabra)
+    await page.waitForSelector('span[class="VIiyi"]')
     
-    // console.log("hola1")
-    // await page.click('.J0lOec')
-    // await page.textContent('[class=".VIiyi"]')
-    await page.waitForTimeout(2000)
+    // await page.waitForTimeout(2000)
     
     // console.log("hola2")
     const traducciones = await page.evaluate(() => {
@@ -38,15 +39,14 @@ async function traductor(palabra, src, target) {
     
     const traducido = []
     
+    //Puede contener mas de una traduccion como puede ser en el caso de que sea
+    //de ingles a español con la palabra gato
     for (const property in traducciones){
         const indTrad = traducciones[property].__incrementalDOMData.key.split("-").length - 1
         const element = traducciones[property].__incrementalDOMData.key.split("-")[indTrad]
         traducido.push(element)
     }
 
-    // for (let i = 0; i < traducciones.length; i++) {
-    //     // const element = await traducciones[i].innerText()
-    // }
     
     // await page.waitForTimeout(2000000)
     
@@ -57,23 +57,9 @@ async function traductor(palabra, src, target) {
     
     
     // await page.waitForSelector('[class="VIiyi"]')
-    // //Puede contener mas de una traduccion como puede ser en el caso de que sea
-    // //de ingles a español con la palabra gato
-    // let traducciones = (await (await page.$('[class="VIiyi"]')).innerText())
 
-
-
-
-    // await page.waitForTimeout(200000)
-    
-    // await page.waitForTimeout(2000000)
 
     await browser.close()
-
-    //   const btnBuscar = page.evaluate(() => {
-    //     document.getElementById('buscar');
-    //     console.log(document.getElementById('buscar'))
-    //   })  
 
     return new Promise((resolve, reject) => {
         setTimeout(
