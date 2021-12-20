@@ -1,10 +1,11 @@
-export const { chromium } = require('playwright');
+const { chromium } = require('playwright');
 
-export async function seleccionarIdioma($src, $target){
-  
+async function seleccionarIdioma(src, target){
+  console.log(src)
+  console.log(target)
 }
 
-export async function traductor ($palabra) {
+async function traductor (palabra) {
   const browser = await chromium.launch({ headless: false })
   
   const page = await browser.newPage()
@@ -12,9 +13,7 @@ export async function traductor ($palabra) {
   // await page.click('class=VfPpkd-YVzG2b')
   // const content = await page.textContent('[aria-label="Texto original"]')
 
-  await page.type('[aria-label="Texto original"]', $palabra)
-
-  
+  await page.type('[aria-label="Texto original"]', palabra)
 
   await page.waitForSelector('span[class="VIiyi"]')
   const traducciones = await page.$$('.VIiyi') 
@@ -26,7 +25,8 @@ export async function traductor ($palabra) {
     traducido.push(element)
   }
 
-
+  //proveer una lista de idiomas para seleccionar
+  // seleccionarIdioma("español", "ingles");
   //Seleccion de idioma
   // barra completa class = aCQag
   // flechas individuales class = VfPpkd-Bz112c-RLmnJb   - ambas tienen la misma clase
