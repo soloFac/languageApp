@@ -1,9 +1,4 @@
-const { firefox } = require('playwright');
-
-
-
-
-
+const { chrome } = require('playwright');
 
 async function escribirPalabra({ page }, palabra){
     // await page.waitForSelector('[aria-label="Texto original"]')
@@ -12,7 +7,7 @@ async function escribirPalabra({ page }, palabra){
 }
 
 async function traductor(palabra, src, target) {
-    const browser = await firefox.launch({ headless: false })
+    const browser = await chrome.launch({ headless: false })
     const page = await browser.newPage()
 
     src = diccionario[src];
