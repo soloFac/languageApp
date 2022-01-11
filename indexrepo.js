@@ -1,4 +1,4 @@
-const { firefox } = require('playwright');
+const { chrome } = require('playwright');
 
 async function escribirPalabra({ page }, palabra){
     // await page.waitForSelector('[aria-label="Texto original"]')
@@ -7,7 +7,7 @@ async function escribirPalabra({ page }, palabra){
 }
 
 async function traductor(palabra, src, target) {
-    const browser = await firefox.launch({ headless: false })
+    const browser = await chrome.launch({ headless: false })
     const page = await browser.newPage()
 
     src = diccionario[src];
@@ -557,60 +557,60 @@ var diccionario = {
 }
 
 
-async function seleccionarIdioma({ page }, src, target) {
-    // const primerIdioma = await page.waitForSelector('div[class="VfPpkd-Bz112c-RLmnJb"]')
-    // console.log(primerIdioma)
+// async function seleccionarIdioma({ page }, src, target) {
+//     // const primerIdioma = await page.waitForSelector('div[class="VfPpkd-Bz112c-RLmnJb"]')
+//     // console.log(primerIdioma)
 
-    // await page.waitForTimeout(2000000)
+//     // await page.waitForTimeout(2000000)
 
-    const flechaSeleccionIdioma = await page.$$(".zQ0atf")
+//     const flechaSeleccionIdioma = await page.$$(".zQ0atf")
     
-    //SELECCIONO EL IDIOMA DE SRC
-    await flechaSeleccionIdioma[0].click()
-    await page.waitForTimeout(1000)
-    //ESPERO QUE SE CARGE EL INPUT PARA ESCRIBIR
-    const inputSelectIdioma = await page.waitForSelector('[placeholder="Buscar idiomas"]')
-    await inputSelectIdioma.type(src)
-    await page.waitForTimeout(500)
-    // //ESPERO QUE SE CARGUE EL IDIOMA EN LA LISTA DESPLEGABLE PARA SELECCIONARLO
-    const selectorIdiomaSrc = await page.waitForSelector('[class="hBxMjb"]')
-    selectorIdiomaSrc.click()
-    await page.waitForTimeout(1000)
+//     //SELECCIONO EL IDIOMA DE SRC
+//     await flechaSeleccionIdioma[0].click()
+//     await page.waitForTimeout(1000)
+//     //ESPERO QUE SE CARGE EL INPUT PARA ESCRIBIR
+//     const inputSelectIdioma = await page.waitForSelector('[placeholder="Buscar idiomas"]')
+//     await inputSelectIdioma.type(src)
+//     await page.waitForTimeout(500)
+//     // //ESPERO QUE SE CARGUE EL IDIOMA EN LA LISTA DESPLEGABLE PARA SELECCIONARLO
+//     const selectorIdiomaSrc = await page.waitForSelector('[class="hBxMjb"]')
+//     selectorIdiomaSrc.click()
+//     await page.waitForTimeout(1000)
 
     
 
-    console.log(diccionario.Inglés)
-    await flechaSeleccionIdioma[1].click()    
-    await page.waitForTimeout(1000)
+//     console.log(diccionario.Inglés)
+//     await flechaSeleccionIdioma[1].click()    
+//     await page.waitForTimeout(1000)
 
-    // await page.waitForTimeout(2000)
-    // listaIdiomas = await page.textContent('div[class="qSb8Pe"]')
-    await page.waitForSelector('[class="Llmcnf"]')
-    idioma = await page.click('div :text("italiano")')
-    // await listaIdiomas.includes("Inglés").click()
+//     // await page.waitForTimeout(2000)
+//     // listaIdiomas = await page.textContent('div[class="qSb8Pe"]')
+//     await page.waitForSelector('[class="Llmcnf"]')
+//     idioma = await page.click('div :text("italiano")')
+//     // await listaIdiomas.includes("Inglés").click()
     
-    // listaIdiomas.forEach(element => {
-    //     if(element.includes("Inglés")){
-    //         console.log(element)
-    //     }
-    // });
+//     // listaIdiomas.forEach(element => {
+//     //     if(element.includes("Inglés")){
+//     //         console.log(element)
+//     //     }
+//     // });
 
-    // await page.click('article:has-text("Playwright")');
-    // //SELECCIONO EL IDIOMA DE TARGET
-    //ESPERO QUE SE CARGE EL INPUT PARA ESCRIBIR
-    // inputSelectIdioma = await page.waitForSelector('[aria-label="Buscar idiomas"]')
-    // await inputSelectIdioma.type("ingl")
-    // await page.waitForTimeout(500)
-    // //ESPERO QUE SE CARGUE EL IDIOMA EN LA LISTA DESPLEGABLE PARA SELECCIONARLO
-    // const selectorIdiomaTarget = await page.waitForSelector('[class="hBxMjb"]')
-    // selectorIdiomaTarget.click()
-    await page.waitForTimeout(500)
+//     // await page.click('article:has-text("Playwright")');
+//     // //SELECCIONO EL IDIOMA DE TARGET
+//     //ESPERO QUE SE CARGE EL INPUT PARA ESCRIBIR
+//     // inputSelectIdioma = await page.waitForSelector('[aria-label="Buscar idiomas"]')
+//     // await inputSelectIdioma.type("ingl")
+//     // await page.waitForTimeout(500)
+//     // //ESPERO QUE SE CARGUE EL IDIOMA EN LA LISTA DESPLEGABLE PARA SELECCIONARLO
+//     // const selectorIdiomaTarget = await page.waitForSelector('[class="hBxMjb"]')
+//     // selectorIdiomaTarget.click()
+//     await page.waitForTimeout(500)
 
 
-    // const ejemplo = await page.evaluate(() => {
-    //     return "probando"
-    // })
-    // console.log(`Palabra de ejemplo: ${ejemplo}`)
+//     // const ejemplo = await page.evaluate(() => {
+//     //     return "probando"
+//     // })
+//     // console.log(`Palabra de ejemplo: ${ejemplo}`)
     
-    // console.log(`Palabra Ejemplo: ${ejemplo}`)
-}
+//     // console.log(`Palabra Ejemplo: ${ejemplo}`)
+// }

@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* input palabra */
 body, #palabra{
     background-color: black;
     color: white;
@@ -25,6 +26,7 @@ label{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* input palabra */
 #palabra{
     position: relative;
     top: 0;
@@ -43,6 +45,7 @@ label{
     /* border-radius: ; */
 }
 
+/* input palabra */
 #palabra, label{
     vertical-align: middle;
 }
@@ -73,5 +76,4 @@ label{
     line-height: 2em;
     box-shadow: 2px 2px 1em black;
     text-shadow: 2px 2px 0.2em black;
-
 }
