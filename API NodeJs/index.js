@@ -1,7 +1,7 @@
 const { response } = require('express')
-const cors = require('cors')
-
 const express = require('express')
+
+const cors = require('cors')
 const app = express()
 
 // puppeteer
@@ -59,36 +59,46 @@ let notes = [
 //     response.end(JSON.stringify(notes))
 // })
 
-app.use( async (request, response) => {
+// app.use( async (request, response) => {
+//   const obj = await index({
+//       palabra: "cerveza",
+//       src: "Español",
+//       target: "Inglés"
+//   });
+//   response.json(obj)
+// })
+
+app.get('/traducir/:palabra', async (request, response) => {
   const obj = await index({
-      palabra: "cat",
-      src: "Inglés",
-      target: "Español"
+    palabra: request.params.palabra,
+    src: "Español",
+    target: "Inglés"
   });
   response.json(obj)
 })
 
-app.get('/', (request, response) => {
-  response.send('<h1>Hello World</h1>')
-})
+
+// app.get('/', (request, response) => {
+//   response.send('<h1>Hello World</h1>')
+// })
 
 
-app.get('/api/notes/:id', (request, response) => {
-  const id = Number(request.params.id)
-  const note = notes.find(note => note.id === id)
+// app.get('/api/notes/:id', (request, response) => {
+//   const id = Number(request.params.id)
+//   const note = notes.find(note => note.id === id)
 
-  if (note) {
-    response.json(note)
-  } else {
-    response.status(404)
-  }
-})
+//   if (note) {
+//     response.json(note)
+//   } else {
+//     response.status(404)
+//   }
+// })
 
-app.delete('/api/notes/:id', (request, response) => {
-  const id = Number(request.params.id)
-  notes = notes.filter(note => note.id !== id)
-  response.status(204).end()
-})
+// app.delete('/api/notes/:id', (request, response) => {
+//   const id = Number(request.params.id)
+//   notes = notes.filter(note => note.id !== id)
+//   response.status(204).end()
+// })
 
 const PORT = 3001
 app.listen(PORT, () => {

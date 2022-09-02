@@ -19,7 +19,8 @@ const scraperObject = {
 		await page.type('[aria-label="Texto original"]', obj.palabra)
 		await page.waitForSelector('span[class="VIiyi"]')
 
-		// SI TIENE MAS DE UNA TRADUCCION LA GUARDO
+		await page.waitForTimeout(2000)
+		// SI TIENE MAS DE UNA TRADUCCION LA GUARDO -- Translate of cat is gato/gata.
 		const traducciones = await page.evaluate(() => {
 			return document.querySelectorAll('.VIiyi');
 		})
