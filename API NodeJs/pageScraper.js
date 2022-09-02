@@ -13,8 +13,9 @@ const scraperObject = {
 		console.log(`El valor de src es: ${src}`)
 		console.log(`El valor de target es: ${target}`)
 
+									 //https://translate.google.com.ar/?hl=es&sl=es&tl=en&op=translate
 		await page.goto(`https://translate.google.com.ar/?hl=es&sl=${src}&tl=${target}&op=translate`)
-						//  https://translate.google.com.ar/?hl=es&sl=es&tl=en&op=translate
+		
 		//ESCRIBO LA PALABRA PARA TRADUCIRLA
 		await page.type('[aria-label="Texto original"]', obj.palabra)
 		await page.waitForSelector('span[class="VIiyi"]')
@@ -35,31 +36,11 @@ const scraperObject = {
 			traducido.push(element)
 		}
 
-		// return new Promise((resolve, reject) => {
-		// 	if(traducido.length > 0) {
-		// 		resolve(traducido)
-		// 	} else {
-		// 		reject("The translate cannot ocurrs")
-		// 	}
-		// 	browser.close()
-		// })
-
 		if( traducido.length > 0 ) {
 			return traducido
 		} else {
 			return "An error ocurrs"
 		}
-        // // Wait for the required DOM to be rendered
-		// await page.waitForSelector('.page_inner');
-		// // Get the link to all the required books
-		// let urls = await page.$$eval('section ol > li', links => {
-		// 	// Make sure the book to be scraped is in stock
-		// 	links = links.filter(link => link.querySelector('.instock.availability > i').textContent !== "In stock")
-		// 	// Extract the links from the data
-		// 	links = links.map(el => el.querySelector('h3 > a').href)
-		// 	return links;
-		// });
-		// return obj
 	}
 }
 

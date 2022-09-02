@@ -17,15 +17,9 @@ async function index(obj){
     return msje
 }
 
-// {
-//   palabra: "gato",
-//   src: "Español",
-//   target: "Inglés"
-// }
-
-
 app.use(cors())
 app.use(express.json())
+
 // commonJs
 // const http = require('http')
 // EmaScript Modules
@@ -54,19 +48,6 @@ let notes = [
     }
   ]
 
-// const app = http.createServer((requiest, response) => {
-//     response.writeHead(200, { 'Content-Type': 'application/json'})
-//     response.end(JSON.stringify(notes))
-// })
-
-// app.use( async (request, response) => {
-//   const obj = await index({
-//       palabra: "cerveza",
-//       src: "Español",
-//       target: "Inglés"
-//   });
-//   response.json(obj)
-// })
 
 app.get('/traducir/:palabra', async (request, response) => {
   const obj = await index({
@@ -78,26 +59,9 @@ app.get('/traducir/:palabra', async (request, response) => {
 })
 
 
+// For the first entrance
 // app.get('/', (request, response) => {
 //   response.send('<h1>Hello World</h1>')
-// })
-
-
-// app.get('/api/notes/:id', (request, response) => {
-//   const id = Number(request.params.id)
-//   const note = notes.find(note => note.id === id)
-
-//   if (note) {
-//     response.json(note)
-//   } else {
-//     response.status(404)
-//   }
-// })
-
-// app.delete('/api/notes/:id', (request, response) => {
-//   const id = Number(request.params.id)
-//   notes = notes.filter(note => note.id !== id)
-//   response.status(204).end()
 // })
 
 const PORT = 3001
