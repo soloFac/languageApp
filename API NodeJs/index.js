@@ -7,6 +7,7 @@ const app = express()
 // puppeteer
 const browserObject = require('./browser')
 const scraperController = require('./pageController')
+const verbObject = require('./quizz/english/verbs')
 
 async function index(obj){
     //Start the browser and create a browser instance
@@ -58,6 +59,10 @@ app.get('/traducir/:palabra', async (request, response) => {
   response.json(obj)
 })
 
+app.get('/quizz/english/verbs', async (request, response) => {
+  const verb = verbObject.randomVerb()
+  response.json(verb)
+})
 
 // For the first entrance
 // app.get('/', (request, response) => {

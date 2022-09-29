@@ -1,0 +1,267 @@
+[
+  {
+    "baseForm": "go",
+    "simplePast": "went",
+    "pastParticiple": "gone"
+  },
+  {
+    "baseForm": "be",
+    "simplePast": "was",
+    "pastParticiple": "been"
+  },
+  {
+    "baseForm": "begin",
+    "simplePast": "began",
+    "pastParticiple": "begun"
+  },
+  {
+    "baseForm": "break",
+    "simplePast": "broke",
+    "pastParticiple": "broken"
+  },
+  {
+    "baseForm": "bring",
+    "simplePast": "brought",
+    "pastParticiple": "brought"
+  },
+  {
+    "baseForm": "buy",
+    "simplePast": "bought",
+    "pastParticiple": "bought"
+  },
+  {
+    "baseForm": "build",
+    "simplePast": "built",
+    "pastParticiple": "built"
+  },
+  {
+    "baseForm": "choose",
+    "simplePast": "chose",
+    "pastParticiple": "chosen"
+  },
+  {
+    "baseForm": "come",
+    "simplePast": "came",
+    "pastParticiple": "come"
+  },
+  {
+    "baseForm": "cost",
+    "simplePast": "cost",
+    "pastParticiple": "cost"
+  },
+  {
+    "baseForm": "cut",
+    "simplePast": "cut",
+    "pastParticiple": "cut"
+  },
+  {
+    "baseForm": "do",
+    "simplePast": "did",
+    "pastParticiple": "done"
+  },
+  {
+    "baseForm": "draw",
+    "simplePast": "drew",
+    "pastParticiple": "drawn"
+  },
+  {
+    "baseForm": "drive",
+    "simplePast": "drove",
+    "pastParticiple": "driven"
+  },
+  {
+    "baseForm": "eat",
+    "simplePast": "ate",
+    "pastParticiple": "eaten"
+  },
+  {
+    "baseForm": "feel",
+    "simplePast": "felt",
+    "pastParticiple": "felt"
+  },
+  {
+    "baseForm": "find",
+    "simplePast": "found",
+    "pastParticiple": "found"
+  },
+  {
+    "baseForm": "get",
+    "simplePast": "got",
+    "pastParticiple": "got"
+  },
+  {
+    "baseForm": "give",
+    "simplePast": "gave",
+    "pastParticiple": "given"
+  },
+  {
+    "baseForm": "go",
+    "simplePast": "went",
+    "pastParticiple": "gone"
+  },
+  {
+    "baseForm": "have",
+    "simplePast": "had",
+    "pastParticiple": "had"
+  },
+  {
+    "baseForm": "hear",
+    "simplePast": "heard",
+    "pastParticiple": "heard"
+  },
+  {
+    "baseForm": "hold",
+    "simplePast": "held",
+    "pastParticiple": "held"
+  },
+  {
+    "baseForm": "keep",
+    "simplePast": "kept",
+    "pastParticiple": "kept"
+  },
+  {
+    "baseForm": "know",
+    "simplePast": "knew",
+    "pastParticiple": "known"
+  },
+  {
+    "baseForm": "leave",
+    "simplePast": "left",
+    "pastParticiple": "left"
+  },
+  {
+    "baseForm": "lead",
+    "simplePast": "led",
+    "pastParticiple": "led"
+  },
+  {
+    "baseForm": "let",
+    "simplePast": "let",
+    "pastParticiple": "let"
+  },
+  {
+    "baseForm": "lie",
+    "simplePast": "lay",
+    "pastParticiple": "lain"
+  },
+  {
+    "baseForm": "lose",
+    "simplePast": "lost",
+    "pastParticiple": "lost"
+  },
+  {
+    "baseForm": "make",
+    "simplePast": "made",
+    "pastParticiple": "made"
+  },
+  {
+    "baseForm": "mean",
+    "simplePast": "meant",
+    "pastParticiple": "meant"
+  },
+  {
+    "baseForm": "meet",
+    "simplePast": "met",
+    "pastParticiple": "met"
+  },
+  {
+    "baseForm": "pay",
+    "simplePast": "paid",
+    "pastParticiple": "paid"
+  },
+  {
+    "baseForm": "put",
+    "simplePast": "put",
+    "pastParticiple": "put"
+  },
+  {
+    "baseForm": "run",
+    "simplePast": "ran",
+    "pastParticiple": "run"
+  },
+  {
+    "baseForm": "say",
+    "simplePast": "said",
+    "pastParticiple": "said"
+  },
+  {
+    "baseForm": "see",
+    "simplePast": "saw",
+    "pastParticiple": "seen"
+  },
+  {
+    "baseForm": "sell",
+    "simplePast": "sold",
+    "pastParticiple": "sold"
+  },
+  {
+    "baseForm": "send",
+    "simplePast": "sent",
+    "pastParticiple": "sent"
+  },
+  {
+    "baseForm": "set",
+    "simplePast": "set",
+    "pastParticiple": "set"
+  },
+  {
+    "baseForm": "sit",
+    "simplePast": "sat",
+    "pastParticiple": "sat"
+  },
+  {
+    "baseForm": "speak",
+    "simplePast": "spoke",
+    "pastParticiple": "spoken"
+  },
+  {
+    "baseForm": "spend",
+    "simplePast": "spent",
+    "pastParticiple": "spent"
+  },
+  {
+    "baseForm": "stand",
+    "simplePast": "stood",
+    "pastParticiple": "stood"
+  },
+  {
+    "baseForm": "take",
+    "simplePast": "took",
+    "pastParticiple": "taken"
+  },
+  {
+    "baseForm": "teach",
+    "simplePast": "taught",
+    "pastParticiple": "taught"
+  },
+  {
+    "baseForm": "tell",
+    "simplePast": "told",
+    "pastParticiple": "told"
+  },
+  {
+    "baseForm": "think",
+    "simplePast": "thought",
+    "pastParticiple": "thought"
+  },
+  {
+    "baseForm": "understand",
+    "simplePast": "understood",
+    "pastParticiple": "understood"
+  },
+  {
+    "baseForm": "wear",
+    "simplePast": "wore",
+    "pastParticiple": "worn"
+  },
+  {
+    "baseForm": "win",
+    "simplePast": "won",
+    "pastParticiple": "won"
+  },
+  {
+    "baseForm": "write",
+    "simplePast": "wrote",
+    "pastParticiple": "written"
+  }
+]
