@@ -1,0 +1,192 @@
+{
+  "avoir": {
+    "cadeau": {
+      "je": "ai",
+      "tu": "as",
+      "il": "a",
+      "nous": "avonz",
+      "vous": "avez",
+      "ils": "ont"
+    }
+  },
+  "etre": {
+    "cadeau": {
+      "je": "suis",
+      "tu": "es",
+      "il": "est",
+      "nous": "sommes",
+      "vous": "êtes",
+      "ils": "sont"
+    }
+  },
+  "aller": {
+    "cadeau": {
+      "je": "vais",
+      "tu": "vas",
+      "il": "va",
+      "nous": "allons",
+      "vous": "allez",
+      "ils": "vont"
+    }
+  },
+  "dire": {
+    "cadeau": {
+      "je": "dis",
+      "tu": "dis",
+      "il": "dit",
+      "nous": "disons",
+      "vous": "dites",
+      "ils": "disent"
+    }
+  },
+  "voir": {
+    "cadeau": {
+      "je": "vois",
+      "tu": "vois",
+      "il": "voit",
+      "nous": "voyons",
+      "vous": "voyez",
+      "ils": "voient"
+    }
+  },
+  "prendre": {
+    "cadeau": {
+      "je": "prends",
+      "tu": "prends",
+      "il": "prend",
+      "nous": "prenons",
+      "vous": "prenez",
+      "ils": "prennent"
+    }
+  },
+  "trouver": {
+    "cadeau": {
+      "je": "trouve",
+      "tu": "trouves",
+      "il": "trouve",
+      "nous": "trouvons",
+      "vous": "trouvez",
+      "ils": "trouvent"
+    }
+  },
+  "aimer": {
+    "cadeau": {
+      "je": "aime",
+      "tu": "aimes",
+      "il": "aime",
+      "nous": "aimons",
+      "vous": "aimez",
+      "ils": "aiment"
+    }
+  },
+  "faire": {
+    "cadeau": {
+      "je": "fais",
+      "tu": "fais",
+      "il": "fait",
+      "nous": "faisons",
+      "vous": "faites",
+      "ils": "font"
+    }
+  },
+  "appeler": {
+    "cadeau": {
+      "je": "appelle",
+      "tu": "appelles",
+      "il": "appelle",
+      "nous": "appelons",
+      "vous": "appelez",
+      "ils": "appellent"
+    }
+  },
+  "acheter": {
+    "cadeau": {
+      "je": "achète",
+      "tu": "achètes",
+      "il": "achète",
+      "nous": "achetons",
+      "vous": "achetez",
+      "ils": "achètent"
+    }
+  },
+  "preferer": {
+    "cadeau": {
+      "je": "préfère",
+      "tu": "préfères",
+      "il": "préfère",
+      "nous": "préférons",
+      "vous": "préférez",
+      "ils": "préfèrent"
+    }
+  },
+  "payer": {
+    "cadeau": {
+      "je": "paye",
+      "tu": "payes",
+      "il": "paye",
+      "nous": "payons",
+      "vous": "payez",
+      "ils": "payent"
+    }
+  },
+  "finir": {
+    "cadeau": {
+      "je": "finis",
+      "tu": "finis",
+      "il": "finit",
+      "nous": "finissons",
+      "vous": "finissez",
+      "ils": "finissent"
+    }
+  },
+  "sortir": {
+    "cadeau": {
+      "je": "sors",
+      "tu": "sors",
+      "il": "sort",
+      "nous": "sortons",
+      "vous": "sortez",
+      "ils": "sortent"
+    }
+  },
+  "pouvoir": {
+    "cadeau": {
+      "je": "puis",
+      "tu": "peux",
+      "il": "peut",
+      "nous": "pouvons",
+      "vous": "pouvez",
+      "ils": "peuvent"
+    }
+  },
+  "boire": {
+    "cadeau": {
+      "je": "bois",
+      "tu": "bois",
+      "il": "boit",
+      "nous": "buvons",
+      "vous": "buvez",
+      "ils": "boivent"
+    }
+  },
+  "vouloir": {
+    "cadeau": {
+      "je": "veux",
+      "tu": "veux",
+      "il": "veut",
+      "nous": "voulons",
+      "vous": "voulez",
+      "ils": "veulent"
+    }
+  },
+  "venir": {
+    "cadeau": {
+      "je": "viens",
+      "tu": "viens",
+      "il": "vient",
+      "nous": "venons",
+      "vous": "venez",
+      "ils": "viennent"
+    }
+  }
+}
